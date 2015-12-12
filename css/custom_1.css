@@ -30,8 +30,8 @@ body {
 }
 
 .custom-header {
-	padding: 20px 20px 10px 30px;
-	height: 50px;
+	padding: 0 20px 10px 30px;
+	/*height: 50px;*/
 	position: relative;
 }
 
@@ -66,7 +66,7 @@ body {
 }
 
 .custom-header h3 {
-	width: 40%;
+	/*width: 40%;*/
 	color: #ddd;
 	color: rgba(255,255,255,0.6);
 	font-weight: 300;
@@ -160,9 +160,9 @@ body {
 
 .fc-calendar .fc-head > div {
 	font-weight: 300;
-	text-transform: uppercase;
-	font-size: 14px;
-	letter-spacing: 3px;
+	/*text-transform: uppercase;*/
+	font-size: 11px;
+	/*letter-spacing: 3px;*/
 	text-shadow: 0 1px 1px rgba(0,0,0,0.4);
 }
 
