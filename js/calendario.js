@@ -62,7 +62,7 @@
       $(this).trigger($.Event('onDay' + e.type.charAt(0).toUpperCase() + e.type.slice(1)), [$(this).data('bz.calendario.dateprop')])
     })
   }
-  
+
   Calendario.prototype.propDate = function () {
     var self = this, month, year, day, hc;
     this.$element.find('div.fc-row > div').filter(':not(:empty)').each(function() {
@@ -227,7 +227,7 @@
           else if (day == 1) inner = '<span class="fc-date fc-emptydate">' + (pMonthLength++ - p + 1) + '</span><span class="fc-weekday">'
           inner += this.options.weekabbrs[idx] + '</span>'
         }
-          
+
         if (day <= monthLength && (i > 0 || j >= p)) {
           inner = '<span class="fc-date">' + day + '</span><span class="fc-weekday">' + this.options.weekabbrs[idx] + '</span>'
           data = Array.prototype.concat(this.caldata[day], this.caldata[this.options.weekabbrs[idx].toUpperCase()])
@@ -259,7 +259,7 @@
         this.year = this.month > 0 ? this.year : --this.year
         this.month = this.month > 0 ? --this.month : 11
       } else if(period === 'year') this.year = --this.year
-    } 
+    }
     else if(dir === 'next') {
       if(period === 'month'){
         this.year = this.month < 11 ? this.year : ++this.year
@@ -273,7 +273,7 @@
     if(value) return this.options[option] = value
     else return this.options[option]
   }
-  
+
   Calendario.prototype.getYear = function() {
     return this.year
   }
@@ -285,7 +285,7 @@
   Calendario.prototype.getMonthName = function() {
     return this.options.displayMonthAbbr ? this.options.monthabbrs[this.month] : this.options.months[this.month]
   }
-  
+
   Calendario.prototype.getCell = function(day, data) {
     if (!data) return this.$cal.find("span.fc-date").filter(function(){return $(this).text() == day}).parent()
     else return this.$cal.find("span.fc-date").filter(function(){return $(this).text() == day}).parent().data('bz.calendario.dateprop')
@@ -356,5 +356,5 @@
   $.fn.calendario.noConflict = function () {
     $.fn.calendario = old
     return this
-  }  
+  }
 }(jQuery);
